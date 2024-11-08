@@ -15,6 +15,12 @@ About This Project:
 - 📊 Aggregate data for the analytics page
 - 🚀 And a lot more...
 
+---
+
+## ⭐DO NOT FORGET TO STAR THIS REPO⭐
+
+---
+
 ### Setup .env file in _backend_ folder
 
 ```bash
