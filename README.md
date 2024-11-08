@@ -1,6 +1,6 @@
 <h1 align="center">beLagu | Realtime Spotify Application ✨</h1>
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
+![Banner App](/frontend/public/banner.jpg)
 
 [Watch Full Tutorial on Youtube](https://youtu.be/4sbklcQ0EXc)
 

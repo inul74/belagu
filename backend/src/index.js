@@ -1,3 +1,4 @@
+import cors from "cors";
 import path from "path";
 import dotenv from "dotenv";
 import express from "express";
@@ -17,6 +18,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 const __dirname = path.resolve();
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 
 app.use(express.json()); // to parse req.body
 app.use(clerkMiddleware()); // this will add auth to req obj => req.auth
@@ -40,14 +48,12 @@ app.use("/api/stats", statRoutes);
 
 // error handler
 app.use((err, req, res, next) => {
-  res
-    .status(500)
-    .json({
-      message:
-        process.env.NODE_ENV === "production"
-          ? "Internal server error"
-          : err.message,
-    });
+  res.status(500).json({
+    message:
+      process.env.NODE_ENV === "production"
+        ? "Internal server error"
+        : err.message,
+  });
 });
 
 app.listen(PORT, () => {
