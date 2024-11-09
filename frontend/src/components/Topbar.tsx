@@ -15,7 +15,7 @@ const Topbar = () => {
       backdrop-blur-md z-10"
     >
       <div className="flex gap-2 items-center">
-        <img src="/logo.svg" className="size-12" alt="logo" />
+        <img src="/logo.svg" className="size-14" alt="logo" />
       </div>
       <div className="flex items-center gap-4">
         {isAdmin && (
