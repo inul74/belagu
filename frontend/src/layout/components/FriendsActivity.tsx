@@ -32,7 +32,7 @@ const FriendsActivity = () => {
             return (
               <div
                 key={user._id}
-                className="cursor-pointer hover:bg-zinc-800/50 p-3 rounded-md transition-colors group"
+                className="cursor-pointer hover:bg-zinc-800/50 p-2 rounded-md transition-colors group"
               >
                 <div className="flex items-start gap-3">
                   <div className="relative">
