@@ -7,6 +7,7 @@ import HomePage from "./pages/home/HomePage";
 import ChatPage from "./pages/chat/ChatPage";
 import AdminPage from "./pages/admin/AdminPage";
 import AlbumPage from "./pages/album/AlbumPage";
+import NotFoundPage from "./pages/404/NotFoundPage";
 import AuthCallbackPage from "./pages/auth-callback/AuthCallbackPage";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/chat" element={<ChatPage />} />
           <Route path="/albums/:albumId" element={<AlbumPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
       <Toaster />
