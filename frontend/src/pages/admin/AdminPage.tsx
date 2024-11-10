@@ -6,6 +6,7 @@ import { useMusicStore } from "@/stores/useMusicStore";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import Header from "./components/Header";
+import Unauthorized from "./components/Unauthorized";
 import DashboardStats from "./components/DashboardStats";
 import SongsTabContent from "./components/SongsTabContent";
 import AlbumsTabContent from "./components/AlbumsTabContent";
@@ -20,7 +21,7 @@ const AdminPage = () => {
     fetchStats();
   }, [fetchAlbums, fetchSongs, fetchStats]);
 
-  if (!isAdmin && !isLoading) return <div>Unauthorized</div>;
+  if (!isAdmin && !isLoading) return <Unauthorized />;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-900 via-zinc-900 to-black text-zinc-100 p-8">
